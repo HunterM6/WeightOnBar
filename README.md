@@ -1,2 +1,2 @@
 # WeightOnBar
-The code fiels for the responsive landing page project
+The code files for the responsive landing page project
