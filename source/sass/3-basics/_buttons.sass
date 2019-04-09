@@ -1,27 +1,97 @@
-.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"]
+// make the checkbox like a switch
+$activeColor: green
+$deactiveColor: red
+.switch
+  background-color: lightgray
+  position: relative
+  input[type="checkbox"]
+    visibility: hidden
+    &:checked
+      + label
+        background-color: $activeColor
+        &::after
+          left: 27px
+label
+  margin-left: 50px
+  position: absolute
+  width: 50px
+  height: 23px
+  top: 0
+  left: 0
+  background-color: $deactiveColor
+  border-radius: 50px
+  -webkit-transition: .4s
+  transition: .4s
+  &:after
+    content: ''
+    width: 21px
+    height: 21px
+    background-color: yellow
+    position: absolute
+    left: -1px
+    top: 0
+    border-radius: 50%
+    box-shadow: 0 0 4px black
+    -webkit-transition: .4s
+    transition: .4s
+
+//second option for toogle switch
+/* The switch - the box around the slider */
+.switch2
+  position: relative
   display: inline-block
-  padding: 20px 60px
-  color: black
-  text-align: center
-  font-size: 14px
-  font-weight: 600
-  text-transform: uppercase
-  text-decoration: none
-  white-space: nowrap
-  background-color: white
-  border-radius: 4px
+  width: 60px
+  height: 34px
+
+  /* Hide default HTML checkbox */
+.switch2 input
+  opacity: 100
+  width: 0
+  height: 0
+
+/* The slider */
+.slider
+  position: absolute
   cursor: pointer
-  box-sizing: border-box
-  transition: all 0.2s ease
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: $deactiveColor
+  -webkit-transition: .4s
+  transition: .4s
 
-  &:hover,
-  &:active,
-  &:focus
 
-    outline: 0
-    transform: scale(1.01)
-    transform: translateY(3px)
+
+.slider:before
+  position: absolute
+  content: ""
+  height: 26px
+  width: 26px
+  left: 4px
+  bottom: 4px
+  background-color: white
+  -webkit-transition: .4s
+  transition: .4s
+
+
+input:checked + .slider
+  background-color: $activeColor
+
+
+input:focus + .slider
+  box-shadow: 0 0 1px gray
+
+
+input:checked + .slider:before
+  -webkit-transform: translateX(26px)
+  -ms-transform: translateX(26px)
+  transform: translateX(26px)
+
+
+/* Rounded sliders */
+.slider.round
+  border-radius: 34px
+
+.slider.round:before
+  border-radius: 50%
