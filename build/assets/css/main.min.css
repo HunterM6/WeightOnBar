@@ -191,7 +191,6 @@ html {
 
 body {
   background: white;
-  font-size: 14px;
   line-height: 1.6;
   font-size: 14px;
   color: black;
@@ -199,11 +198,6 @@ body {
   -webkit-text-size-adjust: 100%;
   margin-left: 10%;
   margin-right: 10%; }
-
-.wrapper {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto; }
 
 section {
   display: -webkit-box; }
