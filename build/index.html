@@ -16,7 +16,7 @@
     </div>
   </section>
 
-  <section id="wrapper">
+  <!-- <section id="wrapper">
     <h2>kg</h2>
     <div class="switch">
       <input type="checkbox" id="checkbox1">
@@ -29,7 +29,39 @@
   <div class="switch2">
   <input type="checkbox" checked>
   <span class="slider round"></span>
-</div>
+</div> -->
+  <section id="wrapper">
+    <h1>kg</h1>
+    <label class="switch3">
+      <input type="checkbox">
+      <span class="slider3"></span>
+    </label>
+    <h1>lbs</h1>
+  </section>
+
+  <table>
+        <tr>
+            <td><input class="button" type="button" value="25" onclick="insertNum(25)"></td>
+            <td><input class="button" type="button" value="20" onclick="insertNum(20)"></td>
+            <td><input class="button" type="button" value="15" onclick="insertNum(15)"></td>
+            <td><input class="button" type="button" value="10" onclick="insertNum(10)"></td>
+        </tr>
+        <tr>
+            <td><input class="button" type="button" value="5" onclick="insertNum(5)"></td>
+            <td><input class="button" type="button" value="2.5" onclick="insertNum(2.5)"></td>
+            <td><input class="button" type="button" value="1.25" onclick="insertNum(1.25)"></td>
+        </tr>
+        <tr>
+            <td><input class="button" id="clear" type="button" value="clear" onclick="clearNum()"></td>
+        </tr>
+    </table>
+    <form>
+        <h3>weight on bar:</h3>
+        <input class="textview" id="weightonbar">
+        <!--hidden-->
+        <input class="textview" id="textv">
+    </form>
+
 
 
   <script src="./assets/js/vendors.js"></script>
